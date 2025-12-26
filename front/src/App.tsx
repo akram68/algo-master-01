@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Courses from "./pages/Courses";
 import CourseDetail from "./pages/CourseDetail";
 import Exercises from "./pages/Exercises";
+import ExerciseDetail from "./pages/ExerciseDetail";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
 import Login from "./pages/Login";
@@ -36,6 +37,14 @@ function AppContent() {
             }
           />
           <Route path="/exercises" element={<Exercises />} />
+          <Route
+            path="/exercises/:id"
+            element={
+              <ProtectedRoute requireAuth>
+                <ExerciseDetail />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path="/profile"
             element={
