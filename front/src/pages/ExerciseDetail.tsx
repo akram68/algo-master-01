@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Code, FileText, ListChecks } from 'lucide-react';
-import Quiz from '../components/Quiz';
+import Quiz from '../components/Exercise/quiz';
 import CodeEditor from '../components/Exercise/MonacoEditor/MonacoEditor';
 import { exercisesApi } from '../services/api';
 import { useAuth } from '../context/AuthContext';
